@@ -10,7 +10,9 @@ fiona==1.8.21
 matplotlib 
 seaborn
 pillow
-
+math
+leafmap
+libpysal
 
 
 
