@@ -2,6 +2,7 @@ from cgitb import html
 import codecs
 import esda
 import pickle
+import seaborn
 from importlib.resources import path
 import streamlit as st
 import geopandas as gpd 
