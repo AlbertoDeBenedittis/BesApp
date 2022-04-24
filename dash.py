@@ -37,7 +37,7 @@ Different_Names_BES = ['Bolzano/Bozen', 'Forlì-Cesena', 'Massa-Carrara', 'Reggi
 Deffirent_Names_ISTAT = ['Bolzano', "Forli'-Cesena", 'Massa Carrara', 'Reggio di Calabria']
 
 # Read the BES_Statistics Dataframe
-path_ = 'Nuovi_Dati2/'
+path_ = 'Nuovi_Dati2'
 List_Statistics = os.listdir(path = path_)
 # Read a random file just to compute the provinces afterward
 df_ = read_dati_bes(path_ + '/' + List_Statistics[0])
