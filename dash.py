@@ -334,16 +334,16 @@ else:
     
     if st.button('Show the best three'):
         if selectbox_area == 'Macros':
-            with open('Dictionaries\diz_mac.pkl', 'rb') as f:
+            with open('Dictionaries/diz_mac.pkl', 'rb') as f:
                 diz = pickle.load(f)
                 Geo_df = aggregate_macros(Macro_df)
         elif selectbox_area == 'Region':
-            with open('Dictionaries\diz_reg.pkl', 'rb') as f:
+            with open('Dictionaries/diz_reg.pkl', 'rb') as f:
                 diz = pickle.load(f)
                 Reg_df = mod_col_geo(Reg_df)
                 Geo_df = order_df_regions(Reg_df, Bes_Regions)
         else:
-            with open('Dictionaries\diz_prov.pkl', 'rb') as f:
+            with open('Dictionaries/diz_prov.pkl', 'rb') as f:
                 diz = pickle.load(f)
                 Geo_df = clean_prov_geo(Prov_df, provinces)
 
