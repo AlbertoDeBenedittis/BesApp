@@ -14,7 +14,7 @@ leafmap
 libpysal
 plotly
 streamlit_folium
-
+openpyxl
 
 
 
