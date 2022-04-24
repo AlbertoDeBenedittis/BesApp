@@ -265,7 +265,7 @@ else:
             Reg_df = order_df_regions(Reg_df, Bes_Regions)
 
             #df = read_dati_bes('Ambiente-Disponibilità di verde urbano-Totale-m2 per abitante.xlsx')
-            df = read_dati_bes('Nuovi_Dati2/' + file +'.xlsx')
+            df = read_dati_bes('Nuovi_Dati2/' + nome_file +'.xlsx')
             
             ## PREPARE PROV GEO DF ## 
             Prov_df = clean_prov_geo(Prov_df, provinces)
