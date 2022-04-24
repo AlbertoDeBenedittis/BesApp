@@ -349,7 +349,8 @@ else:
 
         indicatori = os.listdir('Dati_Streamlite')
         indicatori.append('TERRITORIO')
-        indicatori.remove('Subjective well-being')
+        if 'Subjective well-being' in indicatori:
+            indicatori.remove('Subjective well-being')
 
         ranking = df_ranking(diz, indicatori)
         ranking = from_df_to_gdf(ranking, Geo_df)
