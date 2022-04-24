@@ -1,0 +1,10 @@
+esda-dev
+geopandas-dev
+codecs-dev 
+pickle-dev 
+pandas-dev
+leafmap-dev
+plotly-dev
+folium-dev
+mapclassify-dev
+numpy-dev
