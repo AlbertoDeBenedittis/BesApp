@@ -1,7 +1,6 @@
 folium==0.12.1.post1 
 esda==2.4.1 
 geopandas==0.10.2
-matplotlib-base==3.5.1
 mapclassify==2.4.3
 pandas==1.4.1
 pickleshare==0.7.5
