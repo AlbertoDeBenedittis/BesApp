@@ -17,9 +17,9 @@ import streamlit.components.v1 as components
 
 
 # Path where are stored the shape files
-Reg_Path = 'E:/Geospatial_Project/Dati/Limiti/Lim/Reg01012021/Reg01012021_WGS84.shp'
-Prov_Path = 'E:/Geospatial_Project/Dati/Limiti/Lim/ProvCM01012021/ProvCM01012021_WGS84.shp'
-Macro_Path = 'E:/Geospatial_Project/Dati/Limiti/Lim/RipGeo01012021/RipGeo01012021_WGS84.shp'
+Reg_Path = 'Limiti/Lim/Reg01012021/Reg01012021_WGS84.shp'
+Prov_Path = 'Limiti/Lim/ProvCM01012021/ProvCM01012021_WGS84.shp'
+Macro_Path = 'Limiti/Lim/RipGeo01012021/RipGeo01012021_WGS84.shp'
 # Read the shape files and create the geodataframes
 # One for each territorial division (Macroareas, Regions and provinces)
 Reg_df = gpd.read_file(Reg_Path)
@@ -39,7 +39,7 @@ Different_Names_BES = ['Bolzano/Bozen', 'Forlì-Cesena', 'Massa-Carrara', 'Reggi
 Deffirent_Names_ISTAT = ['Bolzano', "Forli'-Cesena", 'Massa Carrara', 'Reggio di Calabria']
 
 # Read the BES_Statistics Dataframe
-path_ = 'E:/Geospatial_Project/Nuovi_Dati2/'
+path_ = 'Nuovi_Dati2/'
 List_Statistics = os.listdir(path = path_)
 # Read a random file just to compute the provinces afterward
 df_ = read_dati_bes(path_ + '/' + List_Statistics[0])
@@ -159,13 +159,13 @@ else:
     st.write(subj_wll)
 
 
-original_path = 'E:/Geospatial_Project/Mappe_html/'
-path_ = 'E:/Geospatial_Project/Mappe_html/'  + selectbox_ind + '/V_' + selectbox_y + '/' + selectbox_area 
+original_path = 'Mappe_html/'
+path_ = 'Mappe_html/'  + selectbox_ind + '/V_' + selectbox_y + '/' + selectbox_area 
 #st.write(path_)
 
 
 if selectbox_ind == 'Subjective well-being':
-    file = 'E:/Geospatial_Project/Mappe_html/' + selectbox_ind + '/Laisure.txt' 
+    file = 'Mappe_html/' + selectbox_ind + '/Laisure.txt' 
     file = open(file,'r')
     components.html(file.read(), width = 750, height=900)
 
@@ -182,7 +182,7 @@ else:
     
     multi = st.multiselect('Please, select the variables of interest:',
     select_list)
-    _path_ = 'E:/Geospatial_Project/Nuovi_Dati2/'
+    _path_ = 'Nuovi_Dati2/'
 
     for file in multi:
         nome_file = file 
@@ -261,7 +261,7 @@ else:
             Reg_df = gpd.read_file(Reg_Path)
             Prov_df = gpd.read_file(Prov_Path)
             # Read the BES_Statistics Dataframe
-            path_ = 'E:/Geospatial_Project/Nuovi_Dati2/'
+            path_ = 'Nuovi_Dati2/'
             ## PREPARE REG GEO DF ##
             Reg_df = mod_col_geo(Reg_df)
             Reg_df = order_df_regions(Reg_df, Bes_Regions)
@@ -336,20 +336,20 @@ else:
     
     if st.button('Show the best three'):
         if selectbox_area == 'Macros':
-            with open('E:/Geospatial_Project\Dictionaries\diz_mac.pkl', 'rb') as f:
+            with open('Dictionaries\diz_mac.pkl', 'rb') as f:
                 diz = pickle.load(f)
                 Geo_df = aggregate_macros(Macro_df)
         elif selectbox_area == 'Region':
-            with open('E:/Geospatial_Project\Dictionaries\diz_reg.pkl', 'rb') as f:
+            with open('Dictionaries\diz_reg.pkl', 'rb') as f:
                 diz = pickle.load(f)
                 Reg_df = mod_col_geo(Reg_df)
                 Geo_df = order_df_regions(Reg_df, Bes_Regions)
         else:
-            with open('E:/Geospatial_Project\Dictionaries\diz_prov.pkl', 'rb') as f:
+            with open('Dictionaries\diz_prov.pkl', 'rb') as f:
                 diz = pickle.load(f)
                 Geo_df = clean_prov_geo(Prov_df, provinces)
 
-        indicatori = os.listdir('E:/Geospatial_Project\Dati_Streamlite')
+        indicatori = os.listdir('Dati_Streamlite')
         indicatori.append('TERRITORIO')
         indicatori.remove('Subjective well-being')
 
@@ -362,7 +362,7 @@ else:
         m7=folium.Map(location=[41.9027835,12.4963655],tiles='openstreetmap',zoom_start=6)
         j = 1 
         for index, row in ranking2.iterrows():
-            icon=folium.features.CustomIcon('E:/Geospatial_Project/Medaglie/' + str(j) + '.png' ,icon_size=(40,40))
+            icon=folium.features.CustomIcon('Medaglie/' + str(j) + '.png' ,icon_size=(40,40))
             if row['TERRITORIO'] == 'Mezzogiorno':
                 marker = getMarker(40.760791, 15.950441, row['TERRITORIO'], icon)
             else:
