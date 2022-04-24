@@ -7,7 +7,9 @@ pickleshare==0.7.5
 rtree==0.9.7
 shapely==1.8.0
 fiona==1.8.21 
-
+matplotlib 
+seaborn
+pillow
 
 
 
