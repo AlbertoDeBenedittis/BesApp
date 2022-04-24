@@ -259,13 +259,13 @@ else:
             Reg_df = gpd.read_file(Reg_Path)
             Prov_df = gpd.read_file(Prov_Path)
             # Read the BES_Statistics Dataframe
-            path_ = 'Nuovi_Dati2/'
+            
             ## PREPARE REG GEO DF ##
             Reg_df = mod_col_geo(Reg_df)
             Reg_df = order_df_regions(Reg_df, Bes_Regions)
 
             #df = read_dati_bes('Ambiente-Disponibilità di verde urbano-Totale-m2 per abitante.xlsx')
-            df = read_dati_bes(path_ + file +'.xlsx')
+            df = read_dati_bes('Nuovi_Dati2/' + file +'.xlsx')
             
             ## PREPARE PROV GEO DF ## 
             Prov_df = clean_prov_geo(Prov_df, provinces)
