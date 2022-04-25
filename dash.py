@@ -194,7 +194,7 @@ else:
         if selectbox_type == 'Dynamic':
             st.warning('Due to the costly computations neeeded to create the interactive maps it is HIGLHY RECCOMENDED to choose no more than a couple of indicator per time.')
             st.header(titolo)
-            if selectbox_area == 'Macro':
+            if selectbox_area == 'Macros':
                 geodf_Macro = aggregate_macros(Macro_df)
                 df_macro = order_df(df, Macro_Areas)
                 df = from_df_to_gdf(df_macro, geodf_Macro)
