@@ -210,7 +210,7 @@ else:
             
 
             folium_static(folium_interactive_map(df, 'V_' + selectbox_y, nome_file, labels))
-
+            st.caption('Source: ISTAT')
 
 
 
