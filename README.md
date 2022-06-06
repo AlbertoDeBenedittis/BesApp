@@ -19,6 +19,8 @@ Functions2.py contains the code used to:
 * make the analysis
 * create the graphs and maps
 
+The other .py files contains auxiliary pieces of code used in the website. For instance, in Testo_indicatore.py there are dictionaries where the values are long texts (strings) more precisely, the description of each BES indicator and what is the aim of it.
+
 In the folders are stored the: 
 * geodataframe  (Dati_Nuovi2, Dati_Streamlite, No_Profit, Factories) 
 * the map created and stored as .html file (used to show the maps in the dashboard without the need to create them) (Mappe_html)
