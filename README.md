@@ -24,3 +24,7 @@ In the folders are stored the:
 * the map created and stored as .html file (used to show the maps in the dashboard without the need to create them) (Mappe_html)
 * other files such us images used to add some details to the maps (Medaglie)
 * the pickle file created to store some python dictionaries used in the model for detecting the best territories (Dictionaries)
+
+## Report📓
+
+The geospatial_project.pdf is the report where is carefully explained the goal of the analysis, the methodology adopted, the results, and the limits of the project.
